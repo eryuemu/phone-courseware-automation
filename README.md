@@ -1,5 +1,7 @@
 # phone-courseware-automation
 
+[中文说明](./README.zh-CN.md)
+
 Drive Android courseware apps (超星学习通 / U校园 Unipus) from a Linux laptop over
 ADB: read what is on the phone screen, decide the answer, and tap or type it back.
 
