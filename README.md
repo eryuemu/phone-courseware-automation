@@ -5,6 +5,13 @@
 Drive Android courseware apps (超星学习通 / U校园 Unipus) from a Linux laptop over
 ADB: read what is on the phone screen, decide the answer, and tap or type it back.
 
+## Why this project exists
+
+The tedious grind of courseware apps like U校园 (Unipus) prompted me to search for an open-source solution since last year. However, I couldn't find any stable, mature, and reliable project that worked out of the box. I tried using AI Agents to modify and adapt existing open-source scripts, but the maintenance was painful. Furthermore, most existing tools heavily rely on LLMs to answer questions on the fly—without verified answer keys, LLMs make plenty of mistakes.
+
+This sparked a thought: why not let automation directly control the screen to complete the exercises?
+Having previously experimented with AI Agents controlling Android phones over ADB, and having purchased a spare phone running stock Android with root access, I wondered: why not let a program/AI directly drive the phone, reading the display and tapping answers just like a human? That is how this project came to be.
+
 Built the hard way, by measuring what actually costs time instead of guessing.
 Everything below was observed on two real devices on 2026-10-09.
 
