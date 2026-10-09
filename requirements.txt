@@ -1,0 +1,13 @@
+# Core: screenshot + OCR + control tree
+uiautomator2>=3.7
+rapidocr-onnxruntime>=1.2      # bundles its own ONNX models, no network at runtime
+numpy>=2.0
+Pillow>=12.0
+
+# rapidocr-onnxruntime declares opencv-python, which drags in ~150 MB of GUI
+# libraries we never open. Install the headless build instead and let pip grumble:
+#   python -m pip install opencv-python-headless && python -m pip uninstall -y opencv-python
+opencv-python-headless>=5.0
+
+# Optional: the Chrome DevTools Protocol route (needs `adb root`)
+websocket-client>=1.9

@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.scratch/
+
+# Answer dumps are scraped from third-party course material; keep them local.
+*_answers.txt
+answers.json
