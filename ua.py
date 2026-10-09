@@ -25,6 +25,9 @@ ADB = os.environ.get(
     "ADB", "/home/eryuemu/workspace/tool/platform-tools/adb"
 )
 
+SCRATCH = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".scratch")
+os.makedirs(SCRATCH, exist_ok=True)
+
 _engine = None
 
 
@@ -184,9 +187,10 @@ def main():
         show(blocks(img), a.filter)
     elif a.cmd == "shot":
         img = screenshot()
-        cv2.imwrite(f".scratch/{a.name}.png", img)
+        path = os.path.join(SCRATCH, f"{a.name}.png")
+        cv2.imwrite(path, img)
         bs = blocks(img)
-        print(f"saved .scratch/{a.name}.png   ({img.shape[1]}x{img.shape[0]})")
+        print(f"saved {path}   ({img.shape[1]}x{img.shape[0]})")
         show(bs)
     elif a.cmd == "state":
         img = screenshot()
